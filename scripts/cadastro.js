@@ -3,7 +3,11 @@ var formulario = document.getElementById('formulario')
 var todosTreinos = [{
     nome: 'Peito',
     id: 'peito',
-    exercicios: ['treino 1', 'treino 2', 'treino 3'],
+    exercicios: [`Supino inclinado com halteres<br><br>
+      Supino reto com barra<br><br>
+      Afundos nas barras paralelas<br><br>
+      Crossover com pega alta<br><br>
+      Flexões<br>`],
   },
   {
     nome: 'Costas',
@@ -11,9 +15,13 @@ var todosTreinos = [{
     exercicios: ['treino 1', 'treino 2', 'treino 3'],
   },
   {
-    nome: 'Trícips',
+    nome: 'Tríceps',
     id: 'tricips',
-    exercicios: ['treino 1', 'treino 2', 'treino 3'],
+    exercicios: [`Tríceps na testa<br>
+      Tríceps corda na polia<br>
+      Apoio no solo com as mãos fechadas(flexão militar)<br>
+      Supino fechado<br>
+      Mergulho em barras paralelas`],
   },
   {
     nome: 'Biceps',
