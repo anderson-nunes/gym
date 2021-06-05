@@ -15,12 +15,17 @@ function exibirTreinos() {
 
   treinoStorage.forEach(element => {
     var card = document.createElement('div')
+    var exercicios = document.createElement('div')
     var titulo = `<h3>${element.nome}</h3>`
-    var exercicios = element.exercicios.map(exercicio => {
-      return `<p>${exercicio}</p>`
+    element.exercicios.forEach(exercicio => {
+      var item = document.createElement('p')
+      item.textContent = exercicio
+      item.className = 'card-texto'
+      exercicios.appendChild(item)
     })
     card.className = 'card-item'
-    card.innerHTML = titulo + exercicios
+    card.innerHTML = titulo
+    card.appendChild(exercicios)
     cards.appendChild(card)
   });
 }

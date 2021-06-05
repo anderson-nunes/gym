@@ -3,11 +3,12 @@ var formulario = document.getElementById('formulario')
 var todosTreinos = [{
     nome: 'Peito',
     id: 'peito',
-    exercicios: [`Supino inclinado com halteres<br><br>
-      Supino reto com barra<br><br>
-      Afundos nas barras paralelas<br><br>
-      Crossover com pega alta<br><br>
-      Flexões<br>`],
+    exercicios: [`Supino inclinado com halteres`,
+      `Supino reto com barra`,
+      'Afundos nas barras paralelas',
+      'Crossover com pega alta',
+      'Flexões'
+    ]
   },
   {
     nome: 'Costas',
@@ -17,11 +18,12 @@ var todosTreinos = [{
   {
     nome: 'Tríceps',
     id: 'tricips',
-    exercicios: [`Tríceps na testa<br>
-      Tríceps corda na polia<br>
-      Apoio no solo com as mãos fechadas(flexão militar)<br>
-      Supino fechado<br>
-      Mergulho em barras paralelas`],
+    exercicios: ['Tríceps na testa',
+      'Tríceps corda na polia',
+      'Apoio no solo com as mãos fechadas(flexão militar)',
+      'Supino fechado',
+      'Mergulho em barras paralelas'
+    ]
   },
   {
     nome: 'Biceps',
@@ -46,6 +48,15 @@ function exibirNome() {
   textoNome.textContent = nomeSalvo
 }
 
+function atualizarProgresso(passo) {
+  var progresso = document.getElementById('barra-progresso')
+
+  var calculo = passo * 16.66
+
+  progresso.style.width = `${calculo}%`
+
+}
+
 function salvarTreino(evento) {
   evento.preventDefault()
 
@@ -57,17 +68,38 @@ function salvarTreino(evento) {
     treinoStorage = JSON.parse(localStorage.getItem('treinos'))
   }
 
-  var grupoMuscular = todosTreinos.find(item => item.id === treino)
-  treinoStorage.push(grupoMuscular)
-  //JSON.stringify transforma um objeto em string
-  localStorage.setItem('treinos', JSON.stringify(treinoStorage))
-  exibirResultado()
+  if (treinoStorage.length < 6) {
+
+    var grupoMuscular = todosTreinos.find(item => item.id === treino)
+    treinoStorage.push(grupoMuscular)
+    //JSON.stringify transforma um objeto em string
+    localStorage.setItem('treinos', JSON.stringify(treinoStorage))
+
+    atualizarProgresso(treinoStorage.length)
+    if (treinoStorage.length == 6) {
+      exibirResultado()
+    }
+  } else {
+    exibirResultado()
+  }
 }
 
 function exibirResultado() {
   window.location.href = 'resultado.html'
 }
 
-exibirNome()
+function init() {
+  exibirNome()
+
+  var treinoStorage = []
+
+  if (localStorage.hasOwnProperty('treinos')) {
+    //JSON.parse transforma em string em objeto
+    treinoStorage = JSON.parse(localStorage.getItem('treinos'))
+  }
+  atualizarProgresso(treinoStorage.length)
+}
+
+init()
 
 formulario.addEventListener('submit', salvarTreino)

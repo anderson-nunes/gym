@@ -8,4 +8,11 @@ function salvarNome(evento) {
   window.location.href = 'cadastro.html'
 }
 
+function init() {
+
+  localStorage.clear()
+}
+
+init()
+
 formulario.addEventListener('submit', salvarNome)
