@@ -13,7 +13,7 @@ var todosTreinos = [{
   {
     nome: 'Costas',
     id: 'costas',
-    exercicios: ['treino 1', 'treino 2', 'treino 3'],
+    exercicios: ['Puxada aberta no pulley', 'Flexão de ombor no cross', 'Remada com corda na polia alta', 'Remada unilateral na polia alta', 'Remada unilateral apoiada no banco'],
   },
   {
     nome: 'Tríceps',
@@ -28,17 +28,17 @@ var todosTreinos = [{
   {
     nome: 'Biceps',
     id: 'biceps',
-    exercicios: ['treino 1', 'treino 2', 'treino 3'],
+    exercicios: ['Puaxada supinada no pulley', 'Rosca alternada com halteres', 'Rosca testa polia alta', 'Rosca no banco inclinado', 'Rosca Scott'],
   },
   {
     nome: 'Ombro',
     id: 'ombro',
-    exercicios: ['treino 1', 'treino 2', 'treino 3'],
+    exercicios: ['Desenvolvimento de ombros com halteres', 'Desenvolvimento de ombros com barra', 'Desenvolvimento Arnold para ombros', 'Elevação lateral de ombros com halteres', 'Crucifixo invertido com halteres'],
   },
   {
     nome: 'Treino inferior',
     id: 'treino-inferior',
-    exercicios: ['treino 1', 'treino 2', 'treino 3'],
+    exercicios: ['Leg Press 45', 'Agachamento', 'Agachamento no Smith', 'Mesa flexora', 'Agachamento sumô'],
   },
 ]
 
