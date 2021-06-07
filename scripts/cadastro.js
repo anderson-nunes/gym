@@ -43,9 +43,9 @@ var todosTreinos = [{
 ]
 
 function exibirNome() {
-  var nomeSalvo = localStorage.getItem('nome')
+  var nomeSalvo = localStorage.getItem('nome') //localStorage salva chave e valor no navegador
   var textoNome = document.getElementById('texto-nome')
-  textoNome.textContent = nomeSalvo
+  textoNome.textContent = nomeSalvo //textConten é igual ao InnerHtml
 }
 
 function atualizarProgresso(passo) {
