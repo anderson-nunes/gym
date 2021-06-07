@@ -45,7 +45,7 @@ body {
 }
 
 .input-form {
-  padding: 20px 60px;
+  padding: 20px 50px;
   min-width: 250px;
   font-size: 14px;
 }
@@ -102,8 +102,17 @@ body {
   padding: 10px;
 }
 
-.card-texto {
-  margin-bottom: 5px;
+.card-texto,
+h3 {
+  margin-top: 10px;
+}
+
+#texto-nome {
+  color: #f37b37;
+}
+
+select {
+  align-items: center;
 }
 
 .linha-tempo {
