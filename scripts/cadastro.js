@@ -54,7 +54,6 @@ function atualizarProgresso(passo) {
   var calculo = passo * 16.66
 
   progresso.style.width = `${calculo}%`
-
 }
 
 function salvarTreino(evento) {
