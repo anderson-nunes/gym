@@ -20,7 +20,7 @@ let todosTreinos = [{
   id: 'tricips',
   exercicios: ['Tríceps na testa',
     'Tríceps corda na polia',
-    'Apoio no solo com as mãos fechadas(flexão militar)',
+    'Apoio no solo com as mãos',
     'Supino fechado',
     'Mergulho em barras paralelas'
   ]
@@ -33,7 +33,7 @@ let todosTreinos = [{
 {
   nome: 'Ombro',
   id: 'ombro',
-  exercicios: ['Desenvolvimento de ombros com halteres', 'Desenvolvimento de ombros com barra', 'Desenvolvimento Arnold para ombros', 'Elevação lateral de ombros com halteres', 'Crucifixo invertido com halteres'],
+  exercicios: ['Desenvolvimento com halteres', 'Desenvolvimento com barra', 'Desenvolvimento Arnold', 'Elevação lateral com halteres', 'Crucifixo invertido com halteres'],
 },
 {
   nome: 'Treino inferior',
@@ -44,7 +44,7 @@ let todosTreinos = [{
 
 function exibirNome() {
   let nomeSalvo = localStorage.getItem('nome') //localStorage salva chave e valor no navegador
-  var textoNome = document.getElementById('texto-nome')
+  let textoNome = document.getElementById('texto-nome')
   textoNome.textContent = nomeSalvo //textConten é igual ao InnerHtml
 }
 
