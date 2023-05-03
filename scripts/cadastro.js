@@ -1,6 +1,6 @@
-var formulario = document.getElementById('formulario')
+const formulario = document.getElementById('formulario')
 
-var todosTreinos = [{
+let todosTreinos = [{
   nome: 'Peito',
   id: 'peito',
   exercicios: [`Supino inclinado com halteres`,
@@ -43,15 +43,15 @@ var todosTreinos = [{
 ]
 
 function exibirNome() {
-  var nomeSalvo = localStorage.getItem('nome') //localStorage salva chave e valor no navegador
+  let nomeSalvo = localStorage.getItem('nome') //localStorage salva chave e valor no navegador
   var textoNome = document.getElementById('texto-nome')
   textoNome.textContent = nomeSalvo //textConten é igual ao InnerHtml
 }
 
 function atualizarProgresso(passo) {
-  var progresso = document.getElementById('barra-progresso')
+  let progresso = document.getElementById('barra-progresso')
 
-  var calculo = passo * 16.66
+  let calculo = passo * 16.66
 
   progresso.style.width = `${calculo}%`
 }
@@ -59,8 +59,8 @@ function atualizarProgresso(passo) {
 function salvarTreino(evento) {
   evento.preventDefault()
 
-  var treino = document.getElementById('grupo-muscular').value
-  var treinoStorage = []
+  let treino = document.getElementById('grupo-muscular').value
+  let treinoStorage = []
   //So entra neste if se houver treino no localStorage
   if (localStorage.hasOwnProperty('treinos')) {
     //JSON.parse transforma em string em objeto
@@ -69,7 +69,7 @@ function salvarTreino(evento) {
 
   if (treinoStorage.length < 6) {
 
-    var grupoMuscular = todosTreinos.find(item => item.id === treino)
+    let grupoMuscular = todosTreinos.find(item => item.id === treino)
     treinoStorage.push(grupoMuscular)
     //JSON.stringify transforma um objeto em string
     localStorage.setItem('treinos', JSON.stringify(treinoStorage))
@@ -90,7 +90,7 @@ function exibirResultado() {
 function init() {
   exibirNome()
 
-  var treinoStorage = []
+  let treinoStorage = []
 
   if (localStorage.hasOwnProperty('treinos')) {
     //JSON.parse transforma em string em objeto
