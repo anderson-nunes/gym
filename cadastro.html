@@ -5,45 +5,50 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/style.css">
-  <title>Gym</title>
+  <link rel="stylesheet" href="style/style_cadastro.css">
+  <script src="scripts/cadastro.js" defer></script>
+  <title>Document</title>
 </head>
 
 <body>
-  <header class="header">
-    <h1>GYM</h1>
-  </header>
-  <main>
-    <section class='hero-cadastro'>
-      <H2>Vamos cadastrar seus treinos <span id="texto-nome" class="text-primary"></span></H2>
-      <div class="linha-tempo">
-        <ul>
-          <li class="lista">Segunda</li>
-          <li class="lista">Terça</li>
-          <li class="lista">Quarta</li>
-          <li class="lista">Quinta</li>
-          <li class="lista">Sexta</li>
-          <li class="lista">Sábado</li>
-        </ul>
+  <section class='hero-cadastro'>
+    <H2 class="hero">Vamos cadastrar seus treinos <span id="texto-nome" class="text-primary"></span></H2>
+    <div class="linha-tempo">
+      <ul>
+        <li class="lista">Segunda</li>
+        <li class="lista">Terça</li>
+        <li class="lista">Quarta</li>
+        <li class="lista">Quinta</li>
+        <li class="lista">Sexta</li>
+        <li class="lista">Sábado</li>
+      </ul>
+    </div>
+    <div id="barra-progresso" class="linha-horizontal"></div>
+  </section>
+  <div class="container__prog">
+    <div class="item">
+      <h2>
+        Programa de treino feito para você
+      </h2>
+    </div>
+    <div class="item">
+      <div class="item__form">
+        <form id="formulario" class="form form-bg" action="">
+          <select name="select" id="grupo-muscular" class="input-form">
+            <option value="peito">Peito</option>
+            <option value="tricips">Tríceps</option>
+            <option value="ombro">Ombro</option>
+            <option value="costas">Costas</option>
+            <option value="biceps">Bíceps</option>
+            <option value="treino-inferior">Treino inferior</option>
+          </select>
+          <button class="btn-form" type="submit">CONTINUAR</button>
+        </form>
       </div>
-      <div id="barra-progresso" class="linha-horizontal"></div>
-    </section>
-    <section class="form-container">
-      <form id="formulario" class="form form-bg" action="">
-        <h3>Qual grupo muscular?</h3>
-        <select name="select" id="grupo-muscular" class="input-form">
-          <option value="peito">Peito</option>
-          <option value="tricips">Trícips</option>
-          <option value="ombro">Ombro</option>
-          <option value="costas">Costas</option>
-          <option value="biceps">Bíceps</option>
-          <option value="treino-inferior">Treino inferior</option>
-        </select>
-        <button class="btn-form" type="submit">CONTINUAR</button>
-      </form>
-    </section>
-  </main>
-  <script src="scripts/cadastro.js"></script>
+    </div>
+  </div>
+
+
 </body>
 
 </html>

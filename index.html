@@ -1,31 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.css" />
-    <title>Gym</title>
-  </head>
 
-  <body>
-    <header class="header">
-      <h1>GYM</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="style/style.css">
+  <script src="scripts/gym.js" defer></script>
+  <title>GYM</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav class="nav__bar">
+        <h2>WORKUT</h2>
+        <ul>
+          <li>EXERCÍCIOS</li>
+          <li>TREINADORES</li>
+          <li>PREÇOS</li>
+          <li>CONECTE-SE</li>
+        </ul>
+      </nav>
     </header>
-    <main>
-      <section class="hero">
-        <h2>Academia Geração Saúde</h2>
-      </section>
-
-      <section class="form-container">
-        <form id="formulario" class="form" action="">
-          <h3>Qual o seu nome?</h3>
+    <div class="container__section">
+      <div class="text">
+        <h1>Cardio Exercício</h1>
+        <p>Aqui na WORKUT quem faz o treino é você mesmo, escolha qual grupo muscular será desenvolvido no dia do seu
+          treino ou para a semana inteira que lhe entregamos um treino exclusivo para você.</p>
+        <h3>Digite o seu nome</h3>
+        <form id="formulario" class="form space" action="">
           <input id="name" class="input-form" type="text" />
           <button class="btn-form" type="submit">CONTINUAR</button>
         </form>
-      </section>
-    </main>
+      </div>
+      <div class="img">
+        <img src="./assets/image1.png" alt="">
+      </div>
+      <div class="time__1">
+        <h2>38:14</h2>
+        <p>TIME</p>
+      </div>
+      <div class="time__2">
+        <h2>165</h2>
+        <p>EST CALORIES</p>
+      </div>
+    </div>
+    <div class="sub__text">
+      <h3>Popular Exercises</h3>
+      <p>SEE MORE EXERCISES</p>
+    </div>
+    <div class="container__figure">
+      <div class="figure">
+        <img src="./assets/img1.png" alt="">
+      </div>
+      <div class="figure">
+        <img src="./assets/img2.png" alt="">
+      </div>
+      <div class="figure">
+        <img src="./assets/img3.png" alt="">
+      </div>
+      <div class="figure">
+        <img src="./assets/img4.png" alt="">
+      </div>
+      <div class="figure">
+        <img src="./assets/img5.png" alt="">
+      </div>
+      <div class="figure">
+        <img src="./assets/img6.png" alt="">
+      </div>
+    </div>
+    <div class="container__footer">
+      <footer>
+        <ul>
+          <li class=""><i class="fa fa-facebook fa-lg"></i></li>
+          <li class=""><i class="fa fa-twitter fa-lg"></i></li>
+          <li class=""><i class="fa fa-instagram fa-lg"></i></li>
+          <li class=""><i class="fa fa-linkedin fa-lg"></i></li>
+          <li class="workut">WORKUT</li>
+        </ul>
+      </footer>
+    </div>
+</body>
 
-    <script src="scripts/gym.js"></script>
-  </body>
 </html>
