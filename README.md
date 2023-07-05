@@ -10,31 +10,9 @@ A estrutura principal do projeto é baseada em HTML, que é a linguagem de marca
 
 Projeto simulando uma página de academia, aonde você coloca o seu nome e escolhe o grupo muscular que quer treinar ao longa da sua semana, você pode visualizar o progresso da semana com a barra de progresso, ao fim dessa etapa o aluno recebe em tela os exercícios assim propostos pelo programa.
 
-# Executando o projeto
-
-Para rodar esse projeto é necessário ter instalado o Node.js e o npm em sua máquina
-
-## Instale ou atualize as dependencias do projeto
-
-```bash
-npm i
-```
-
-## Rodando o projeto
-
-```bash
-npm run dev
-```
-
-## Build do projeto
-
-```bash
-npm run build
-```
-
 ## deploy
 
-link surge: skinny-underwear.surge.sh
+link surge: https://anderson-projeto-academia.surge.sh/
 
 ## Desktop
 
