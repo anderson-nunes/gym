@@ -160,7 +160,7 @@ section h2 {
 
 .container__prog {
   width: 100%;
-  height: 600px;
+  min-height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -171,7 +171,6 @@ section h2 {
 .item {
   width: 558px;
   height: 514px;
-  margin-top: 4rem;
 }
 
 .item h2 {
